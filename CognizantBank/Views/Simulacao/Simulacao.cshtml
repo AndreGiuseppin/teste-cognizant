@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Simulação";
+}
+
+<div class="container">
+    <div class="row">
+        <input type="hidden" id="valorDolar" name="name" value="@ViewBag.ValorDolar" />
+        <h2 style="margin-bottom: 3%;">Simular Conversão</h2>
+            <h1 id="valorConvertido"></h1>
+            <div class="form-group col-md-12">
+                <label style="margin-right: 1%;"> Valor:</label><input type="text" id="valor" name="Valor" />
+            </div>
+            <div class="form-group col-md-12">
+                <input type="radio" name="tipoConversao" value="0" />Dolár
+                <input type="radio" name="tipoConversao" value="1" />Real
+            </div>
+            <button id="simular" onclick="Converter()" class="btn btn-primary col-md-12" >Simular</button>
+    </div>
+</div>
+<script>
+    function Converter() {
+        var valor = $('#valor').val();
+        var valorDolar = $('#valorDolar').val();
+        $('#valorConvertido').html("")
+        if ($("input[name='tipoConversao']:checked").val() == 0) {
+            var dolar = "Valor convertido para $" + (parseFloat(valor.replace(",", ".")) / parseFloat(valorDolar.replace(",", "."))).toFixed(2);            
+            $('#valorConvertido').append(dolar)
+        } else {
+            var real = "Valor convertido para R$" + (parseFloat(valor.replace(",", ".")) * parseFloat(valorDolar.replace(",", "."))).toFixed(2);
+            $('#valorConvertido').append(real)
+        }
+    }
+</script>

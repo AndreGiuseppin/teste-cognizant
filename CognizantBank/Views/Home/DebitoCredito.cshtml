@@ -1,0 +1,69 @@
+﻿@model CognizantBank.Entities.ContaCorrente
+
+@{
+    ViewData["Title"] = "DebitoCredito";
+}
+
+<h2>Pagar Contas</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form action="/Home/DebitoCredito" method="post">
+                <div class="card" style="width: 18rem;">
+                    <img src="~/images/agua.jpg" class="card-img-top" alt="..." width="100%">
+                    <div class="card-body">
+                        <p> Qual o ID da Conta que sera usado para pagamento?</p>
+                        <input type="text" name="Id" />
+                        <p> Qual o valor que gostaria de pagar?</p>
+                        <input type="text" name="CurrentValue" />
+                        <input type="radio" id="tipoContaCorrente" name="tipoConta" value="false"/>
+                        <label for="tipoContaCorrente">Corrente</label>
+
+                        <input type="radio" id="tipoContaCredito" name="tipoConta" value="true"/>
+                        <label for="tipoContaCredito">Credito</label>
+
+                        <button class="btn btn-primary" type="submit" value="Pagar"> Pagar </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <form action="/Home/DebitoCredito" method="post">
+                <div class="card" style="width: 18rem;">
+                    <img src="~/images/internet.jpg" class="card-img-top" alt="..." width="100%">
+                    <div class="card-body">
+                        <p> Qual o ID da Conta que sera usado para pagamento?</p>
+                        <input type="text" name="Id" />
+                        <p> Qual o valor que gostaria de pagar?</p>
+                        <input type="text" name="CurrentValue" />
+                        <input type="radio" id="tipoContaCorrente" name="tipoConta" value="false" />
+                        <label for="tipoContaCorrente">Corrente</label>
+                        <input type="radio" id="tipoContaCredito" name="tipoConta" value="true" />
+                        <label for="tipoContaCredito">Credito</label>
+                        <button class="btn btn-primary" type="submit" value="Pagar"> Pagar </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <form action="/Home/DebitoCredito" method="post">
+                <div class="card" style="width: 18rem;">
+                    <img src="~/images/telefone.jpg" class="card-img-top" alt="..." width="100%">
+                    <div class="card-body">
+                        <p> Qual o ID da Conta que sera usado para pagamento?</p>
+                        <input type="text" name="Id" />
+                        <p> Qual o valor que gostaria de pagar?</p>
+                        <input type="text" name="CurrentValue" />
+                        <input type="radio" id="tipoContaCorrente" name="tipoConta" value="false" />
+                        <label for="tipoContaCorrente">Corrente</label>
+                        <input type="radio" id="tipoContaCredito" name="tipoConta" value="true" />
+                        <label for="tipoContaCredito">Credito</label>
+                        <button class="btn btn-primary" type="submit" value="Pagar"> Pagar </button>
+                    </div>
+                </div>
+            </form>
+        </div>        
+    </div>
+</div>
+

@@ -1,0 +1,19 @@
+﻿@model CognizantBank.Entities.ContaCorrente
+
+@{
+    ViewData["Title"] = "DeletarConta";
+}
+
+<div class="container">
+    <div class="row">
+        <h2 style="margin-bottom: 3%;">Deletar Conta Corrente</h2>
+
+        <form action="/Home/DeletarConta" method="post">
+            <div class="form-group col-md-12 text-center">
+                <label style="margin-right: 1%;"> Informe o ID da conta que deseja deletar? </label><input type="text" name="Id" />
+            </div>
+            <button class="btn btn-primary col-md-12" type="submit" value="Deletar"> Deletar </button>
+        </form>
+
+    </div>
+</div>

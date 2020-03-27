@@ -1,0 +1,30 @@
+﻿@model CognizantBank.Entities.ContaCorrente
+
+@{
+    ViewData["Title"] = "TransferirValor";
+}
+
+<div class="container">
+    <div class="row">
+        <h2 style="margin-bottom: 3%;">Transferir Valor</h2>
+        <form action="/Home/TransferirValor" method="post" class="text-center">
+
+            <div class="form-group">
+                <label style="margin-right: 1%;"> Qual o ID da Conta que irá realizar a transferencia?</label><input type="text" name="Id" />
+            </div>
+            <div class="form-group">
+                <label style="margin-right: 1%;"> Qual o ID da Conta que irá receber a transferencia?</label><input type="text" name="Id" />
+            </div>
+            <div class="form-group">
+                <label style="margin-right: 1%;"> Qual o valor que gostaria de transferir?</label><input type="text" name="CurrentValue" />
+            </div>
+            <div>
+                <input type="radio" id="tipoContaCorrente" name="tipoConta" value="false" />
+                <label style="margin-right: 1%;" for="tipoContaCorrente">Transferir usando Debito</label>
+                <input type="radio" id="tipoContaCredito" name="tipoConta" value="true" />
+                <label for="tipoContaCredito">Transferir usando Credito</label>
+            </div>
+            <button class="btn btn-primary col-md-12" type="submit" value="Transferir"> Transferir </button>
+        </form>
+    </div>
+</div>
